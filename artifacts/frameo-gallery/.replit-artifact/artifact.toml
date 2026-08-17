@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "Frameo Gallery"
+description = "A sideloadable Android photo frame app for Bozz CPF1011 devices that displays photos from an Immich folder with weather and shared iCal overlays, plus local setup and photo management."
+version = "1.0.0"
+id = "artifacts/frameo-gallery"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 23125
+
+[services.development]
+run = "pnpm --filter @workspace/frameo-gallery run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/frameo-gallery", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/frameo-gallery", "run", "serve" ]
+
+[services.env]
+PORT = "23125"
+BASE_PATH = "/"

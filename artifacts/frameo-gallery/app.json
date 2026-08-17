@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Frameo Gallery",
+    "slug": "frameo-gallery",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "icon": "./assets/images/icon.png",
+    "scheme": "frameo-gallery",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#141923"
+    },
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "orientation": "landscape",
+      "immersiveMode": true,
+      "edgeToEdgeEnabled": true,
+      "statusBar": {
+        "hidden": true,
+        "backgroundColor": "#141923"
+      },
+      "navigationBar": {
+        "hidden": true,
+        "backgroundColor": "#141923"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://replit.com/"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
